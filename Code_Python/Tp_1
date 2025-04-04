@@ -44,3 +44,21 @@ for i in range(100):
     
     if x[i] == 2 * pi:
         print("La première période est passée")  
+#%% 5.1 Exo    
+
+chaine = "Bonjour"
+
+for i in chaine:
+    print(i)
+
+liste = [1, 2, 3, 4, 5]
+
+for i in liste:
+    print(i)
+
+#%% 5.2 Exo
+
+for i in range(1, 11):
+    print(i)
+    if i == 5:
+        break
