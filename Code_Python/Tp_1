@@ -1,1 +1,46 @@
 
+print(((a + b) / (c * d) * (d**a))**b - a % b * (e**b))
+
+#%% Exemple 2.2.2
+
+Ch=input ( "Veuillez entrer un nombre positif quelconque : ")
+
+#%% 2.3 Exercice Récap
+
+cheveux_blancs = eval(input("Entrez votre nombre actuel de cheveux blancs : "))
+
+années_stressées = eval(input("Combien d'années avez-vous été stressé ? "))
+
+taux_stress = 1.5
+
+cheveux_blancs_totaux = cheveux_blancs + (années_stressées * taux_stress)
+
+print("Après", int(années_stressées),"années de stress, vous avez environ", 
+      int(cheveux_blancs_totaux), "cheveux blancs.")
+
+#%% 2.6 Exercice Récap
+
+moyenne = eval(input("Ma moyenne : "))
+
+if moyenne > 10:
+    print("Je passe au semestre suivant.")
+elif moyenne < 8:
+    difference = 10 - moyenne
+    print("Je suis en dessous de la moyenne de", difference, "donc je redouble.")
+else:                                                           # entre 8 et 10
+    points_a_rattraper = 10 - moyenne
+    print("Je vais au rattrapage et je dois rattraper", points_a_rattraper, "points.")
+
+#%% 3.3 Exercice Récap
+
+from math import pi, sin
+
+x = 100 * [0]  # création d'une liste x formée de 100 zéros  
+y = 100 * [0]  # création d'une liste y formée de 100 zéros  
+
+for i in range(100):  
+    x[i] = 4 * pi * i / 100  # x s'incrémente de 0 à 4π sur 100 valeurs
+    y[i] = sin(x[i])        # y est égal au sinus de x
+    
+    if x[i] == 2 * pi:
+        print("La première période est passée")  
