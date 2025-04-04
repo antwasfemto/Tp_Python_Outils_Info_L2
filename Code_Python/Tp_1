@@ -62,3 +62,23 @@ for i in range(1, 11):
     print(i)
     if i == 5:
         break
+
+#%% 5.3 Exo
+
+chaine = "Bonjour les licences 2"
+chaine_inverse = chaine[::-1] 
+print(chaine_inverse)
+
+chaine_utilisateur = input("Entrez une chaîne de caractères : ")
+chaine_inverse = chaine_utilisateur[::-1]
+print("Chaîne inversée :", chaine_inverse)
+
+#%% 5.4 Exo
+
+chaine = "Les licences deux programment"
+nombre_e = chaine.count('e')
+print(f"Nombre de 'e' dans la chaîne : {nombre_e}")
+
+chaine = input("Entrez une phrase : ")
+nombre_e = chaine.count('e')
+print("Nombre de 'e' minuscules : ", nombre_e)
