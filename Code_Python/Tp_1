@@ -82,3 +82,19 @@ print(f"Nombre de 'e' dans la chaîne : {nombre_e}")
 chaine = input("Entrez une phrase : ")
 nombre_e = chaine.count('e')
 print("Nombre de 'e' minuscules : ", nombre_e)
+
+#%% 5.5 Exo part 3
+
+print('*')
+for i in range(1, 8):
+    print('*' + ' ' * (i-1) + '*')
+    
+#%% 5.5 Exo extra
+
+n = 5
+# Partie supérieure
+for i in range(1, n + 1):
+    print(' ' * (n - i) + '*' * (2 * i - 1))
+# Partie inférieure
+for i in range(n - 1, 0, -1):
+    print(' ' * (n - i) + '*' * (2 * i - 1))
