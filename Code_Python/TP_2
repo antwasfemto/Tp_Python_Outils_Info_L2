@@ -1,0 +1,44 @@
+#%% EX1 part 1
+
+N = 10 # Nombre total de lampes
+maliste = [0] * N  # Liste regroupant le nombre de lampe
+n = int(input("Entrez le nombre d’instants : "))
+print(f"maliste = {maliste}")
+for i in range(n):
+    maliste = [0] * N  # Éteindre toutes les lampes
+    index = i % N # Calculer la lampe à allumer 
+    maliste[index] = 1
+    print(f"maliste = {maliste}")
+
+#%% EX1 part 2
+
+N = 10 # Nombre total de lampes
+maliste = [0] * N # Liste regroupant le nombre de lampe
+n = int(input("Entrez le nombre d’instants : "))
+print(f"maliste = {maliste}")
+for i in range(n):  # Boucle à rebours
+    maliste = [0] * N     # Éteindre toutes les lampes
+    index = (N - (i % N) - 1)  # Calcule de la position à allumer à rebours
+    maliste[index] = 1
+    print(f"maliste = {maliste}")
+#%% EX 2
+
+dico = {
+    "nom": input("Entrez votre nom : "),
+    "prénom": input("Entrez votre prénom : "),
+    "date de naissance": input("Entrez votre date de naissance : "),
+    "email": input("Entrez votre adresse mail : "),
+    "mot de passe": input("Entrez votre mot de passe : ")
+}
+
+# Afficher les informations enregistrées (sauf mot de passe, pour la sécurité)
+print("\n Inscription réussie ! Voici les infos enregistrées :")
+for clé, valeur in dico.items():
+    if clé != "mot de passe":
+        print(f"{clé.capitalize()} : {valeur}")
+        
+def voir_dico ():
+    if input("Entrez votre mot de passe : ") == dico['mot de passe']:
+        for clé, valeur in dico.items():
+            if clé != "mot de passe":
+                print(f"{clé.capitalize()} : {valeur}")
