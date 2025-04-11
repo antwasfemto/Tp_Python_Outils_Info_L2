@@ -42,3 +42,59 @@ def voir_dico ():
         for clé, valeur in dico.items():
             if clé != "mot de passe":
                 print(f"{clé.capitalize()} : {valeur}")
+
+#%% extra try-exept
+
+def factoriel_recurs(n):
+    """
+    This function allow computing the factorial number of the entry ’n’. It
+    is using a recursive method which permit to decrease the computation time and  
+    the necessary computer memory
+
+    Input :
+        ============
+
+
+    n : The number that we  want compute the factorial parameter
+
+    Output :
+    ============
+
+    The result of n!
+    """
+    # Ici nous avons une fonction récursive, à chaque nouveau tour, le fonction
+    # enlève 1 à n se qui à pour effet d’obliger n à diminuer jusqu’à 1 et
+    # donc de sortir de la boucle récursive.
+    while True: # Déclenchement d’un boucle infinie
+        try: # Test du type de variable
+            if n==1: # Boucle if de test de la valeur de n
+                return 1
+                break # Sortie de la boucle
+            elif n==0: # Boucle if de test de la valeur de n
+                return 0
+                break # Sortie de la boucle
+            else:
+                return n*factoriel_recurs(n=1) # Renvoie n que multiplie la
+                                               # fonction elle même
+                break # Sortie de la boucle
+        except TypeError: # Si une erreur de type survient
+                          # alors l’utilisateur devra 
+                          # rentrer un nouveau nombre ‘n’
+            print("Rentrez_un_nombre_de_type ‘integer’_")
+            n=eval(input("Donnez_un_nombre_"))
+            
+if __name__=='__main__': # Programme principal
+    A=factoriel_recurs('pas_un_nombre')
+    print(A)
+
+#%% EX 3
+
+def fibonacci(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+n = int(input("Entrez un indice n pour calculer Fibonacci à l'indice n' : "))
+print(f"Fibonnacci({n}) = {fibonacci(n)}")
+
